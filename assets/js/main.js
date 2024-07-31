@@ -4,7 +4,6 @@ const navToggle = document.getElementById('nav-toggle');
 const navClose = document.getElementById('nav-close');
 
 
-
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
 
@@ -59,3 +58,15 @@ navLink.forEach(l => l.addEventListener('click', linkAction));
 
 
 /*==================== DARK LIGHT THEME ====================*/
+
+
+
+
+
+// window.addEventListener('blur',()=>{
+//     document.title = 'Вернитесь 🥲'
+// })
+//
+// window.addEventListener('focus',()=>{
+//     document.title = 'Морозова Алиса - Frontend-разработчик'
+// })
