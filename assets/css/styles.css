@@ -341,8 +341,43 @@ a {
     margin-bottom: var(--mb-0-75);
 }
 
-.home__description {
+
+.home__tags__first__line,
+.home__tags__second__line{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.home__tags__first__line{
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: var(--mb-0-5);
+}
+
+.home__tags__second__line {
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: var(--mb-2);
+}
+
+.home__tag {
+    border: 1px solid var(--text-color);
+    border-radius: 0.8rem;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: default;
+    background-color: var(--first-color-second);
+    padding: .25rem .5rem;
+}
+
+/*.home__tag:nth-child(n+4) {*/
+/*    grid-column: span 1; !* Каждая ячейка занимает одну колонку *!*/
+/*}*/
+
+
+.home__description {
+    margin-bottom: var(--mb-2-5);
+    text-align: justify;
+    text-indent:32px;
 }
 
 .home__scroll {
@@ -437,6 +472,7 @@ a {
 
 .about__description {
     text-align: center;
+    text-indent:32px;
     margin-bottom: var(--mb-2-5);
 }
 
@@ -548,15 +584,19 @@ a {
 }
 
 
-.skills__html, .skills__js, .skills__react {
+.skills__html, .skills__react {
     width: 90%;
 }
 
-.skills__css {
+.skills__css,.skills__js{
     width: 80%;
 }
 
 .skills__ts {
+    width: 70%;
+}
+
+.skills__redux {
     width: 70%;
 }
 
@@ -923,7 +963,7 @@ a {
 
 @media screen and (min-width: 568px) {
     .home__content {
-        grid-template-columns: max-content 1fr 1fr;
+        grid-template-columns: max-content 1.5fr 1fr;
     }
 
     .home__data {
@@ -943,6 +983,7 @@ a {
 
     .about__description {
         margin-top: var(--mb-2-5);
+        text-align: justify;
     }
 
 
@@ -953,7 +994,7 @@ a {
     }
 
     .qualification__data {
-        column-gap: 4rem;
+        column-gap: 2.5rem;
     }
 
 }
@@ -1021,7 +1062,7 @@ a {
 
     .home__content{
         padding-top: 5.5rem;
-        column-gap: 2rem;
+        column-gap: 3rem;
     }
 
     .home__blob{
@@ -1037,9 +1078,7 @@ a {
         border-bottom: 15px solid var(--first-color-alt)
     }
 
-    .about__description{
-        text-align: initial;
-    }
+
 
     .about__info{
         justify-content: space-between;
