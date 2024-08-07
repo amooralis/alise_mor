@@ -109,6 +109,7 @@ body.dark-theme {
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 body {
@@ -923,10 +924,10 @@ a {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
     .container {
-        margin-left: var(--mb-1);
-        margin-right: var(--mb-1);
+        margin-left: var(--mb-2);
+        margin-right: var(--mb-2);
     }
 
     .nav__menu {
@@ -951,6 +952,10 @@ a {
 
     .qualification__data {
         gap: .5rem;
+    }
+
+    .project__img {
+        width: 300px;
     }
 
 }
