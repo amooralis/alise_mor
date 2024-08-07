@@ -74,9 +74,6 @@ skillsHeader.forEach((h) => {
 // })
 
 
-/*==================== SERVICES MODAL ====================*/
-
-
 /*==================== PORTFOLIO SWIPER  ====================*/
 var swiper = new Swiper(".portfolio__container", {
     cssMode: true,
@@ -90,9 +87,6 @@ var swiper = new Swiper(".portfolio__container", {
         clickable: true,
     }
 });
-
-
-/*==================== TESTIMONIAL ====================*/
 
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
@@ -133,7 +127,7 @@ window.addEventListener('scroll', scrollHeader);
 
 /*==================== SHOW SCROLL UP ====================*/
 
-function scrollUp(){
+function scrollUp() {
     const scrollUp = document.getElementById('scroll-up');
     if (this.scrollY > 500) {
         scrollUp.classList.add('show-scroll');
@@ -157,10 +151,10 @@ const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dar
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
 
 
-if (selectedTheme){
+if (selectedTheme) {
 
-    document.body.classList[selectedTheme === 'dark' ? 'add': 'remove'](darkTheme);
-    themeButton.classList[selectedIcon === 'uil-moon' ? 'add': 'remove'](iconTheme);
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
 }
 
 
@@ -168,7 +162,7 @@ document.body.classList.toggle(darkTheme);
 themeButton.classList.add(iconTheme);
 
 
-themeButton.addEventListener('click',()=>{
+themeButton.addEventListener('click', () => {
 
     document.body.classList.toggle(darkTheme);
     themeButton.classList.toggle(iconTheme);
