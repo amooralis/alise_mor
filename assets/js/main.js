@@ -174,10 +174,23 @@ themeButton.addEventListener('click', () => {
 
 })
 
-// window.addEventListener('blur',()=>{
-//     document.title = 'Вернитесь 🥲'
-// })
-//
-// window.addEventListener('focus',()=>{
-//     document.title = 'Морозова Алиса - Frontend-разработчик'
-// })
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const textContainers = document.querySelectorAll('.text-container');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show'); // Удаляем класс при уходе за пределы видимости
+            }
+        });
+    });
+
+    textContainers.forEach(container => {
+        observer.observe(container);
+    });
+});
+

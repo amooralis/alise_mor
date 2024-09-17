@@ -544,7 +544,7 @@ a {
     margin-right: var(--mb-0-75);
 }
 
-.skills__data{
+.skills__data {
     display: flex;
     align-items: center;
     height: 100%;
@@ -555,7 +555,7 @@ a {
 }
 
 
-.skills__titles img{
+.skills__titles img {
     width: 45px;
     height: 45px;
     margin-right: var(--mb-2);
@@ -1208,3 +1208,26 @@ a {
     }
 
 }
+
+
+.text-container {
+    overflow: hidden; /* скрываем текст, пока он не будет в видимой области */
+}
+
+.animated-text {
+    transform: translateY(100px); /* начальная позиция текста вне экрана (снизу) */
+    opacity: 0; /* начальная прозрачность */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.animated-icon {
+    transform: translateY(-100px); /* начальная позиция текста вне экрана (снизу) */
+    opacity: 0; /* начальная прозрачность */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.text-container.show .animated-text, .text-container.show .animated-icon {
+    transform: translateY(0); /* текст поднимается в исходное положение */
+    opacity: 1; /* делаем текст видимым */
+}
+
